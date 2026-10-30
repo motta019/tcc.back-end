@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cadastro</title>
+
+    <link rel="stylesheet" href="../css/cadastro.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- FUNDO AZUL + LOGO -->
+        <section class="center">
+
+            <!-- LOGO -->
+            <div class="image-container">
+                <img src="../img/geral/andermaq.png" alt="Logo principal">
+            </div>
+
+        </section>
+
+
+        <!-- FORMULÁRIO -->
+        <section class="left">
+
+            <div class="login-content">
+
+               <h1>Cadastrar</h1>
+
+<form action="https://tcc-back-end-seven.vercel.app/cadastro" method="POST">
+
+  <div class="input-group">
+    <input
+      type="text"
+      name="nome"
+           placeholder="Nome"
+      required
+    >
+  </div>
+
+  <div class="input-group">
+    <input
+      type="email"
+      name="email"
+      placeholder="Email"
+      required
+    >
+  </div>
+
+  <div class="input-group">
+    <input
+      type="password"
+      name="senha"
+      placeholder="Senha"
+      required
+    >
+  </div>
+
+  <button type="submit">
+    CADASTRAR
+  </button>
+
+  <a href="login.html" class="register">
+    VOLTAR
+  </a>
+
+</form>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LADO ESQUERDO -->
+    <section class="left">
+
+      <div class="login-content">
+
+        <h1>BEM-VINDO</h1>
+
+        
+<form action="https://tcc-back-end-seven.vercel.app/login" method="POST">
+
+   <!--email-usuario-->
+  <div class="input-group">
+    <input
+      type="email"
+      name="email"
+      placeholder="E-mail"
+      required
+    >
+  </div>
+
+   <!--senha-->
+  <div class="input-group">
+    <input
+      type="password"
+      name="senha"
+      placeholder="Senha"
+      required
+    >
+  </div>
+
+  <button type="submit">
+    ENTRAR
+  </button>
+
+</form>
+          <!-- Lembrar e esqueci a senha -->
+          <div class="options">
+
+            <label class="remember">
+              <input type="checkbox">
+              <span>Lembrar-me</span>
+            </label>
+
+          <a href="redefinirsenha.html" class="forgot-password">
+              Esqueci minha senha
+
+          </a>
+
+           
+          </div>
+
+        
+
+          <!-- Cadastrar -->
+          <a href="cadastro.html" class="register">
+            CADASTRAR
+          </a>
+
+           <a href="servicos.html" class="forgot-password">
+              Voltar
+
+          </a>
+
+        <form id="formLogin">
+
+      </div>
+
+    </section>
+
+
+    <!-- LADO DIREITO -->
+    <section class="right">
+
+      <div class="image-container">
+        <img src="../img/geral/andermaq.png" alt="Logo principal">
+      </div>
+
+    </section>
+
+  </div>
+  <script>
+  const formLogin = document.getElementById('formLogin');
+
+  formLogin.addEventListener('submit', async function(event) {
+    event.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const senha = document.getElementById('senha').value;
+
+    try {
+      const resposta = await fetch('http://localhost:3000/login', {
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json'
+        },
+
+        credentials: 'include',
+
+        body: JSON.stringify({
+          email: email,
+          senha: senha
+        })
+      });
+
+      const dados = await resposta.json();
+
+      if (resposta.ok) {
+        alert('Login realizado com sucesso!');
+
+        window.location.href = '../index.html';
+      } else {
+        alert(dados.mensagem);
+      }
+
+    } catch (erro) {
+      console.error(erro);
+
+      alert('Não foi possível conectar ao servidor.');
+    }
+  });
+</script>
+
+</body>
+
+</html>

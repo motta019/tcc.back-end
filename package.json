@@ -1,0 +1,10 @@
+{
+  "name": "andermaq-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site Andermaq com autenticação e cotações via Vercel Functions",
+  "dependencies": {
+    "@upstash/redis": "^1.35.3",
+    "resend": "^6.35.0"
+  }
+}

@@ -1,0 +1,272 @@
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Inter', sans-serif; /* fonte do texto*/
+    background: linear-gradient(135deg,#0a4ea3,#0f63cf); /* fundo da página*/
+    min-height:100vh; /*altura mínima */
+    display:flex; /*organizar e posicionar elementos.*/
+    justify-content:center; /* no eixo principal-centralizado horizontalmente.*/
+    align-items:center; /*eixo transversal- elemento bem no centro da tela*/
+    padding:40px; /*espaçamento interno de 40px em todos os lados- nas bordas da tela*/
+}
+
+/* CARD */ /*caixa branca, grande, com cantos arredondados, sombra e duas colunas*/
+.produto-container{ /* seleciona qualquer elemento HTML que tenha a classe*/
+    background:#fff; /*toda largura*/
+    width:100%;
+    max-width:1300px; /* largura máxima */
+    border-radius:20px;/*Arredonda os cantos da caixa*/
+    overflow:hidden; /*Esconde qualquer conteúdo que ultrapasse os limites da caixa- 
+    imagens ou outros elementos não "saiam" pelos cantos arredondados*/
+    display:grid; /*organizar os elementos internos em linhas e colunas.*/
+    grid-template-columns:450px 1fr; /* divisão em duas colunas*/ 
+ /*
+┌─────────────────────────────────────────────┐
+│          │                                  │
+│  450px   │          espaço restante         │
+│  imagem  │       informações do produto     │
+│          │                                  │
+└─────────────────────────────────────────────┘
+*/
+    box-shadow: /* duas sombras no card*/
+        0 10px 25px rgba(0,0,0,.15),
+        0 20px 60px rgba(0,0,0,.10);
+    transition:.3s;
+}
+
+.produto-container:hover{ /*O card aumentaria suavemente ao passar o mouse, 
+       em vez de mudar instantaneamente.*/
+    transform:translateY(-4px);
+}
+/*
+┌─────────────────────────────────────────────────────┐
+│                                                     │
+│     IMAGEM             INFORMAÇÕES DO PRODUTO       │
+│     450px              (espaço restante)            │
+│                                                     │
+│                                                     │
+└─────────────────────────────────────────────────────┘
+       ↓
+    sombra
+    */
+
+/* IMAGEM */
+.produto-imagem{
+    background:#f8fafc;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+    border-right:1px solid #e5e7eb;
+}
+
+.produto-imagem img{
+    width:100%;
+    max-width:360px;
+    transition:.4s ease;
+}
+
+.produto-imagem:hover img{
+    transform:scale(1.05);
+}
+
+/* CONTEÚDO */
+.produto-info{
+    padding:50px;
+}
+
+.categoria{
+    display:inline-block;
+    background:#e8f1ff;
+    color:#0a4ea3;
+    font-weight:600;
+    padding:8px 14px;
+    border-radius:50px;
+    margin-bottom:20px;
+    font-size:14px;
+}
+
+.produto-info h1{
+    font-size:42px;
+    color:#0d2f5c;
+    margin-bottom:15px;
+    font-weight:800;
+}
+
+.codigo{
+    color:#64748b;
+    margin-bottom:25px;
+    font-size:15px;
+}
+
+/* DESCRIÇÃO */
+.descricao{
+    font-size:18px;
+    line-height:1.8;
+    color:#334155;
+    margin-bottom:35px;
+}
+
+/* SEÇÃO */
+.secao-titulo{
+    font-size:22px;
+    font-weight:700;
+    color:#0d2f5c;
+    margin-bottom:20px;
+    position:relative;
+}
+
+.secao-titulo::after{
+    content:'';
+    width:60px;
+    height:4px;
+    background:#0a4ea3;
+    position:absolute;
+    left:0;
+    bottom:-8px;
+    border-radius:20px;
+}
+
+/* MEDIDAS */
+.medidas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin-top:25px;
+    margin-bottom:40px;
+}
+
+.medida{
+    background:#f1f5f9;
+    border:1px solid #dbe3ec;
+    padding:12px 20px;
+    border-radius:10px;
+    font-weight:600;
+    color:#334155;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.medida:hover{
+    background:#0a4ea3;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+/* CARACTERÍSTICAS */
+.especificacoes{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.item-especificacao{
+    background:#f8fafc;
+    padding:18px;
+    border-radius:12px;
+    border-left:4px solid #0a4ea3;
+}
+
+.item-especificacao strong{
+    display:block;
+    margin-bottom:5px;
+    color:#0d2f5c;
+}
+
+/* BOTÕES */
+.acoes{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn-cotacao{
+    background:#0a4ea3;
+    color:#fff;
+    text-decoration:none;
+    padding:16px 28px;
+    border-radius:12px;
+    font-weight:700;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(10,78,163,.3);
+}
+
+.btn-cotacao:hover{
+    background:#083b7c;
+    transform:translateY(-3px);
+}
+
+.btn-voltar{
+    background:#f1f5f9;
+    color:#334155;
+    text-decoration:none;
+    padding:16px 28px;
+    border-radius:12px;
+    font-weight:600;
+    border:1px solid #dbe3ec;
+    transition:.3s;
+}
+
+.btn-voltar:hover{
+    background:#e2e8f0;
+}
+
+/* RESPONSIVO */
+@media(max-width:991px){
+
+    .produto-container{
+        grid-template-columns:1fr;
+    }
+
+    .produto-imagem{
+        border-right:none;
+        border-bottom:1px solid #e5e7eb;
+    }
+
+    .produto-info{
+        padding:35px;
+    }
+
+    .produto-info h1{
+        font-size:32px;
+    }
+
+    .especificacoes{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:576px){
+
+    body{
+        padding:15px;
+    }
+
+    .produto-info{
+        padding:25px;
+    }
+
+    .produto-info h1{
+        font-size:28px;
+    }
+
+    .descricao{
+        font-size:16px;
+    }
+
+    .acoes{
+        flex-direction:column;
+    }
+
+    .btn-cotacao,
+    .btn-voltar{
+        width:100%;
+        text-align:center;
+    }
+}

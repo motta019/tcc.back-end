@@ -1,0 +1,228 @@
+body {
+    font-family: Arial;
+    text-align: center;
+}
+#logo{
+    background: url("../img/geral/andermaq.png");
+    width: 30vh;
+    height: 10vh;
+    background-size: cover;
+    border: 1px solid black;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+/* MENU PRINCIPAL - cabeçalho */
+nav {
+    width: 100%;
+    height: 130px;
+    background-color: #075baa;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    padding: 0 12%;
+}
+
+/* Logo */
+nav > a {
+    display: flex;
+    align-items: center;
+}
+
+/* Lista de links */
+nav .ul {
+    display: flex;
+    align-items: center;
+    gap: 45px;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* Links */
+nav .ul a {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Efeito quando passar o mouse */
+nav .ul a:hover {
+    color: #dbeaff;
+}
+
+/* Botão SERVIÇOS */
+nav .ul .btn-c {
+    background-color: #579cf0;
+    padding: 17px 22px;
+    border-radius: 11px;
+    color: white;
+}
+
+nav .ul .btn-c:hover {
+    background-color: #4289dc;
+}
+/*google maps*/
+.mapa {
+    width: 75%;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+    border-radius: 10px;
+}
+/* Área de contato */
+.contato-info {
+    width: 90%;
+    margin: 20px auto 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Informações do lado direito */
+.informacoes {
+    width: 35%;
+    text-align: left;
+}
+
+.informacoes p {
+    margin: 18px 0;
+}
+
+.informacoes h2 {
+    margin-bottom: 20px;
+}
+  body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+         /*Solicitar Cotação*/
+    header {
+      background-color: #003366;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+      /*Preencha os dados*/
+ .container {
+    max-width: 100%;
+    margin: 0;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+.menu-container {
+    max-width: 90%;
+    margin: 30px auto;
+    background: #c4c5c5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+   label {
+      display: block;
+      margin-top: 55px;
+      font-weight: bold;
+    }
+
+    /* Formulário em duas colunas */
+.linha-form {
+    display: flex;
+    gap: 28px;
+    width: 100%;
+    margin-bottom: 20px;
+    
+}
+
+/* Cada campo */
+.campo {
+    flex: 1;
+    text-align: left;
+}
+
+/* Nome dos campos */
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 0;
+    font-weight: normal;
+    color: #555;
+    flex: 0 0 250px;
+}
+
+/* Asterisco vermelho */
+.campo label span {
+    color: red;
+}
+
+/* Campos */
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 11px;
+    margin: 0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Área de descrição */
+.campo textarea {
+    height: 100px;
+    resize: vertical;
+}
+.campo-menor {
+    flex: 0 0 200px;
+}
+
+Descrição ocupa toda a largura */
+.descricao {
+    width: 100%;
+}
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+      
+
+    button {
+      margin-top: 20px;
+      display: flex;
+      width: 9%;
+      padding: 12px;
+      background-color: #003366;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0055aa;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+      margin-top: 30px;
+    }
+
+    

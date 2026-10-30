@@ -1,0 +1,261 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #c4c5c5;
+  font-size: 19px;
+}
+#logo{
+    background: url("../img/geral/andermaq.png");
+    width: 30vh;
+    height: 10vh;
+    background-size: cover;
+    border: 1px solid black;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+/*alinhamento da menu*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 55px;
+    background-color: #0055aa;
+}
+/*alinhamento dos botoes*/
+nav ul{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+/*estilizaçao dos textos dentro dos botoes*/
+nav ul a{
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+}
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: #0055aa;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+/*animaçao dos botoes*/
+nav ul a:hover::after{
+    width: 100%;
+
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px;
+}
+
+h1 {
+  color: #000000;
+  margin-bottom: 30px;
+}
+  
+    /*estilizaçao dos botoes do menu*/
+.btn{
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s ease;
+}
+.btn:hover{
+    background-color: #3580db;
+}
+
+    .btn:hover{
+    background-color: #3580db;
+}
+header{
+    background: #0055aa;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.text {
+  flex: 1;
+}
+
+.text p {
+  color: #0c0c0c;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.media {
+  flex: 1;
+}
+
+.media video {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+.media {
+  flex: 1;
+}
+
+.media img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+}
+/* Gif-video*/
+.video-fundo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+    /* ============================= */
+/* PRINCIPAIS PRODUTOS */
+/* ============================= */
+
+.principais-produtos {
+  margin-top: 60px;
+}
+
+.principais-produtos h2 {
+  color: #174875;
+  font-size: 27px;
+  font-weight: 400;
+  margin-bottom: 35px;
+}
+
+/* CARD DO PRODUTO */
+.produto-destaque {
+  background-color: white;
+  min-height: 450px;
+  border-radius: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px;
+  gap: 60px;
+}
+
+/* IMAGEM */
+.produto-imagem {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produto-imagem img {
+  width: 90%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* INFORMAÇÕES */
+.produto-info {
+  flex: 1;
+  text-align: center;
+}
+
+.produto-info h3 {
+  color: #174875;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.produto-codigo {
+  color: #777;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.produto-codigo strong {
+  color: #174875;
+}
+
+.produto-info .descricao {
+  color: #777;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+/* BOTÃO */
+.botao-produto {
+  display: inline-block;
+  background-color: #234f7b;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao-produto:hover {
+  background-color: #163b5d;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .produto-destaque {
+    flex-direction: column;
+    padding: 30px;
+    gap: 20px;
+  }
+
+  .produto-imagem,
+  .produto-info {
+    width: 100%;
+  }
+
+  .produto-imagem img {
+    width: 80%;
+  }
+
+}
+
+ footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+      margin-top: 30px;
+    }

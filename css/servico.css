@@ -1,0 +1,181 @@
+ body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #0055aa;
+    }
+#logo{
+    background: url("../img/geral/andermaq.png");
+    width: 30vh;
+    height: 10vh;
+    background-size: cover;
+    border: 1px solid black;
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+/*alinhamento da menu*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 55px;
+}
+/*alinhamento dos botoes*/
+nav ul{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: -20px;
+}
+/*estilizaçao dos textos dentro dos botoes*/
+nav ul a{
+    color: white;
+    margin: 0 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    display: block;
+    text-decoration: none;
+}
+nav ul a:not(.btn):after{
+    content: "";
+    background-color: #0055aa;
+    height: 3px;
+    width: 0%;
+    display: block;
+    margin: 0 auto;
+    transition: 0.3s;
+}
+/*animaçao dos botoes*/
+nav ul a:hover::after{
+    width: 100%;
+
+}
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .btn{
+    background-color: #4f9cf9;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: 0.1s ease;
+    
+}
+.btn:hover{
+    background-color: #3580db;
+}
+
+    .btn:hover{
+    background-color: #3580db;
+}
+header{
+    background: #0163c6;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      width: 250px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      overflow: hidden;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 10px 0;
+    }
+
+    .card p {
+      padding: 0 10px;
+      font-size: 14px;
+    }
+
+    .card button {
+      margin: 15px;
+      padding: 10px;
+      border: none;
+      background-color: #003366;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .card button:hover {
+      background-color: #0055aa;
+    }
+    
+    .detalhes {
+  background: white;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.detalhes img {
+  width: 250px;
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.detalhes h1 {
+  color: #003366;
+}
+
+.detalhes h2 {
+  color: #0055aa;
+}
+
+.detalhes p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+
+/* Ajustes finais da grade de produtos */
+body { min-height: 100vh; }
+nav { padding: 25px 8%; }
+nav ul { margin: 0; }
+header { text-align: center; padding: 25px 15px; }
+.container { max-width: 1200px; margin: 0 auto; align-items: stretch; }
+.card { display: flex; flex-direction: column; }
+.card h3 { padding: 0 10px; color: #003366; }
+.card p { white-space: normal; line-height: 1.5; flex: 1; }
+.card button { align-self: center; }
+footer { text-align:center; padding:15px; background:#003366; color:#fff; margin-top:30px; }
+@media (max-width: 768px) {
+  nav { flex-direction: column; padding: 20px; }
+  nav ul { flex-wrap: wrap; justify-content: center; gap: 12px; }
+  nav ul a { margin: 0 8px; }
+}

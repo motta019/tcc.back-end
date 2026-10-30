@@ -1,0 +1,448 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #eef4fb;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+}
+
+
+/* =========================
+   LADO ESQUERDO
+========================= */
+
+.left {
+  width: 50%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    160deg,
+    #0055aa 0%,
+    #003366 50%,
+    #0055aa 100%
+  );
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* Decoração azul */
+
+.left::before {
+  content: "";
+
+  position: absolute;
+
+  width: 430px;
+  height: 430px;
+
+  background: #4f9cf9;
+
+  border-radius: 50%;
+
+  top: -300px;
+  left: -150px;
+}
+
+.left::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: #4f9cf9;
+
+  border-radius: 50%;
+
+  bottom: -380px;
+  left: -200px;
+}
+
+
+/* =========================
+   FORMULÁRIO
+========================= */
+
+.login-content {
+  width: 100%;
+  max-width: 400px;
+
+  padding: 30px;
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Título */
+
+.login-content h1 {
+  color: white;
+
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 35px;
+}
+
+
+/* =========================
+   CAMPOS
+========================= */
+
+.input-group {
+  width: 100%;
+
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  height: 53px;
+
+  border: none;
+  outline: none;
+
+  background: white;
+
+  border-radius: 30px;
+
+  padding: 0 30px;
+
+  color: #333;
+
+  font-size: 14px;
+
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.input-group input::placeholder {
+  color: #555;
+
+  text-align: center;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================
+   OPÇÕES
+========================= */
+
+.options {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 22px;
+
+  padding: 0 15px;
+
+  font-size: 11px;
+}
+
+
+/* Lembrar-me */
+
+.remember {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.remember input {
+  appearance: none;
+
+  width: 13px;
+  height: 13px;
+
+  border: 2px solid #003366;
+
+  cursor: pointer;
+}
+
+.remember input:checked {
+  background: #14527c;
+
+  box-shadow: inset 0 0 0 2px white;
+}
+
+
+/* Esqueci senha */
+
+.forgot-password {
+  color: #f8f9fa;
+
+  text-decoration: none;
+
+  transition: 0.3s;
+}
+
+.forgot-password:hover {
+  color: white;
+}
+
+
+/* =========================
+   BOTÃO ENTRAR
+========================= */
+
+button {
+  width: 100%;
+  height: 53px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background: #4f9cf9;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  letter-spacing: 3px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  margin-bottom: 12px;
+}
+
+button:hover {
+  background: #000000;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   BOTÃO CADASTRAR
+========================= */
+
+.register {
+  width: 100%;
+  height: 53px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid white;
+
+  border-radius: 30px;
+
+  background: transparent;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.register:hover {
+  background: white;
+
+  color: #1642a1;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   LADO DIREITO
+========================= */
+
+.right {
+  width: 50%;
+  min-height: 100vh;
+
+  background: white;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+/* Decorações */
+
+.right::before {
+  content: "";
+
+  position: absolute;
+
+  width: 450px;
+  height: 450px;
+
+  background: #0055aa;
+
+  border-radius: 50%;
+
+  top: -280px;
+  right: -180px;
+}
+
+.right::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  background: #0055aa;
+
+  border-radius: 50%;
+
+  bottom: -400px;
+  right: -250px;
+}
+
+
+/* =========================
+   IMAGEM
+========================= */
+
+.image-container {
+  width: 80%;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+.image-container img {
+  display: block;
+
+  max-width: 100%;
+  max-height: 500px;
+
+  object-fit: contain;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .left,
+  .right {
+    width: 50%;
+  }
+
+  .login-content {
+    max-width: 350px;
+  }
+
+  .image-container {
+    width: 85%;
+  }
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 767px) {
+
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  .right {
+    display: none;
+  }
+
+  .login-content {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+
+/* =========================
+   CELULAR PEQUENO
+========================= */
+
+@media (max-width: 400px) {
+
+  .login-content {
+    width: 100%;
+  }
+
+  .options {
+    font-size: 10px;
+  }
+}

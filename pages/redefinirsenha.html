@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Redefinir Senha</title>
+
+  <link rel="stylesheet" href="../css/redefinirsenha.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LADO ESQUERDO -->
+    <section class="left">
+
+      <div class="login-content">
+
+        <h1>REDEFINIR SENHA</h1>
+        
+        <p class="descricao">
+          Insira e confirme sua nova senha.
+        </p>
+
+        <form id="formRedefinirSenha">
+
+          <!-- NOVA SENHA -->
+          <div class="input-group">
+
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="Nova senha"
+              required
+            >
+
+          </div>
+
+
+          <!-- REQUISITOS -->
+
+          <div class="requisitos">
+
+            <p id="tamanho">
+              ● Ter no mínimo 8 caracteres
+            </p>
+
+            <p id="numero">
+              ● Ter no mínimo 1 número
+            </p>
+
+            <p id="maiuscula">
+              ● Ter no mínimo 1 letra maiúscula
+            </p>
+
+            <p id="minuscula">
+              ● Ter no mínimo 1 letra minúscula
+            </p>
+
+            <p id="especial">
+              ● Ter no mínimo 1 caractere especial
+            </p>
+
+          </div>
+
+
+          <!-- CONFIRMAR SENHA -->
+
+          <div class="input-group">
+
+            <input
+              type="password"
+              id="confirmarSenha"
+              name="confirmarSenha"
+              placeholder="Confirmar nova senha"
+              required
+            >
+
+          </div>
+
+
+          <!-- MENSAGEM -->
+
+          <p id="mensagemSenha" class="mensagem"></p>
+
+
+          <!-- BOTÃO -->
+
+          <button type="submit">
+            REDEFINIR SENHA
+          </button>
+
+
+          <!-- VOLTAR -->
+
+          <a href="login.html" class="register">
+            VOLTAR
+          </a>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- LADO DIREITO -->
+    <section class="right">
+
+      <div class="image-container">
+
+        <img
+          src="../img/geral/andermaq.png"
+          alt="Logo principal"
+        >
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <script src="../js/redefinirsenha.js"></script>
+
+</body>
+
+</html>
